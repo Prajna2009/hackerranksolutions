@@ -1,0 +1,12 @@
+def cutTheSticks(arr):
+    s = arr
+    res = []
+    for _ in arr:
+        mi = min(s)
+        for i in range(0,len(s)):
+            s[i] = s[i]-mi
+        res.append(len(s))
+        s = list(filter(lambda a: a != 0, s))
+        if(len(s)==0):
+            break
+    return res
