@@ -1,0 +1,6 @@
+def equalizeArray(arr):
+    s = []
+    for i in arr:
+        s.append(arr.count(i))
+
+    return len(arr) - max(s)
